@@ -83,7 +83,7 @@ KERNEL_TOOLCHAIN_PATH_gcc := $(KERNEL_TOOLCHAIN_$(KERNEL_ARCH))/$(KERNEL_TOOLCHA
 
 ifneq ($(USE_CCACHE),)
     ifeq ($(USE_SYSTEM_CCACHE),)
-        CCACHE_BIN := $(BUILD_TOP)/prebuilts/tools-extras/$(HOST_PREBUILT_TAG)/bin/ccache
+        CCACHE_BIN := $(BUILD_TOP)/prebuilts/tools-lineage/$(HOST_PREBUILT_TAG)/bin/ccache
         # Check that the executable is here.
         CCACHE_BIN := $(strip $(wildcard $(ccache)))
     else
