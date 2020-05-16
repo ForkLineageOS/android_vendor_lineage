@@ -121,6 +121,11 @@ PRODUCT_PACKAGES += \
     LineageThemesStub \
     ThemePicker
 
+# Prebuilt apks
+PRODUCT_PACKAGES += \
+    FirefoxLite \
+    ShuttleFree
+
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
     7z \
