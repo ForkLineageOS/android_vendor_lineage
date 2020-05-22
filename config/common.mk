@@ -121,6 +121,19 @@ PRODUCT_PACKAGES += \
     FirefoxLite \
     ShuttleFree
 
+# FLOSS
+ifeq ($(FLOSS_PACK), aurora)
+PRODUCT_PACKAGES += \
+    AuroraStore \
+    F-DroidPrivilegedExtension
+endif
+ifeq ($(FLOSS_PACK), microg)
+PRODUCT_PACKAGES += \
+    AuroraStore \
+    F-DroidPrivilegedExtension \
+    GmsCore
+endif
+
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
     7z \
