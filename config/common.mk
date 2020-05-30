@@ -121,6 +121,10 @@ PRODUCT_PACKAGES += \
     FirefoxLite \
     ShuttleFree
 
+# omni
+PRODUCT_PACKAGES += \
+    OmniJaws
+
 # FLOSS
 ifeq ($(FLOSS_PACK), aurora)
 PRODUCT_PACKAGES += \
