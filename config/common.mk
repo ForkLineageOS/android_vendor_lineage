@@ -118,7 +118,7 @@ PRODUCT_PACKAGES += \
 
 # Prebuilt apks
 PRODUCT_PACKAGES += \
-    FirefoxLite \
+    duckduckgo \
     ShuttleFree
 
 # omni

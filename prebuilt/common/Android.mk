@@ -49,9 +49,9 @@ include $(BUILD_PREBUILT)
 
 # Prebuilt Apps
 
-# Firefox Lite Browser | https://github.com/mozilla-tw/FirefoxLite
+# duckduckgo Browser | https://github.com/duckduckgo/Android
 include $(CLEAR_VARS)
-LOCAL_MODULE := FirefoxLite
+LOCAL_MODULE := duckduckgo
 LOCAL_SRC_FILES := apk/$(LOCAL_MODULE).apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
