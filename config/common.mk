@@ -185,6 +185,9 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/lineage/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/common
+ifeq ($(PRODUCT_GMS_CLIENTID_BASE), android-realme)
+DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/realme
+endif
 
 # Face Unlock
 ifneq ($(TARGET_DISABLE_ALTERNATIVE_FACE_UNLOCK), true)
