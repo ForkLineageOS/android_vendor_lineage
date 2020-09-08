@@ -22,6 +22,7 @@ PRODUCT_PACKAGES += \
 
 # Lineage packages
 PRODUCT_PACKAGES += \
+    AudioFX \
     Backgrounds \
     Etar \
     LockClock \
