@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Whether device has smaller dot/u/u notch -->
+    <bool name="config_haveDotNotch">true</bool>
+</resources>
