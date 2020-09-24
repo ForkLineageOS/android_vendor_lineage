@@ -209,7 +209,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/lineage/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/common
-ifeq ($(PRODUCT_GMS_CLIENTID_BASE), android-realme)
+ifneq ($(filter android-oppo android-realme,$(PRODUCT_GMS_CLIENTID_BASE)),)
 DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/realme
 endif
 
