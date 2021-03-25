@@ -79,5 +79,10 @@
 
         <!-- Select text on recents -->
         <item>device_personalization_services/Overview__enable_overview=true</item>
+
+        <!-- Enable IORap features -->
+        <item>runtime_native_boot/iorap_perfetto_enable=true</item>
+        <item>runtime_native_boot/iorap_readahead_enable=true</item>
+
     </string-array>
 </resources>
