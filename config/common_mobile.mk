@@ -42,6 +42,19 @@ endif
 
 # Accents
 PRODUCT_PACKAGES += \
+    AccentColoriOSBlueOverlay \
+    AccentColorHadalZoneOverlay \
+    AccentColorLostInForestOverlay \
+    AccentColorMagentaOverlay \
+    AccentColorPixelBlueOverlay \
+    AccentColorPurpleHeatOverlay \
+    AccentColorRedOverlay \
+    AccentColorRoseOverlay \
+    AccentColorScooterOverlay \
+    AccentColorSlateOverlay \
+    AccentColorSuperNovaOverlay \
+    AccentColorTealOverlay \
+    AccentColorTorchRedOverlay \
     LineageBlackTheme \
     LineageBlackAccent \
     LineageBlueAccent \
