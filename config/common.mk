@@ -355,4 +355,3 @@ USE_CCACHE := true
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/lineage/config/partner_gms.mk
--include vendor/lineage/config/props.mk
