@@ -12,6 +12,10 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     Exchange2
 
+# DocumentsUI
+PRODUCT_PACKAGES += \
+    PixelDocumentsUIGoogleOverlay
+
 # Lineage packages
 PRODUCT_PACKAGES += \
     Backgrounds \
