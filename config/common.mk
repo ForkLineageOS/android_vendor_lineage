@@ -1,28 +1,6 @@
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
-PRODUCT_BRAND ?= LineageOS
-
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-
-ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.com.google.clientidbase=android-google
-else
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
-endif
-
-ifeq ($(TARGET_BUILD_VARIANT),eng)
-# Disable ADB authentication
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
-else
-# Enable ADB authentication
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
-endif
-
-BUILD_FINGERPRINT := google/redfin/redfin:11/RQ2A.210405.005/7181113:user/release-keys
-
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
@@ -113,11 +91,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/lineage/prebuilt/common/media/audio/,$(TARGET_COPY_OUT_PRODUCT)/media/audio)
 
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.ringtone=The_big_adventure.ogg \
-    ro.config.notification_sound=End_note.ogg \
-    ro.config.alarm_alert=Bright_morning.ogg
-
 # Themes
 PRODUCT_PACKAGES += \
     LineageThemesStub \
@@ -173,10 +146,6 @@ PRODUCT_PACKAGES += \
 # rsync
 PRODUCT_PACKAGES += \
     rsync
-
-# Storage manager
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.storage_manager.enabled=true
 
 # These packages are excluded from user builds
 PRODUCT_PACKAGES_DEBUG += \
@@ -317,12 +286,6 @@ else
     FLOS_TYPE := vanilla
 endif
 
-# Do not enforce privapp-permissions whitelist on unofficial builds
-ifneq ($(LINEAGE_BUILDTYPE), UNOFFICIAL)
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.control_privapp_permissions=enforce
-endif
-
 ifeq ($(TARGET_FLOS), true)
     LINEAGE_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-FORK-$(FLOS_TYPE)-$(shell date -u +%Y%m%d-%H%M)-$(LINEAGE_BUILD)
 else
@@ -392,3 +355,4 @@ USE_CCACHE := true
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/lineage/config/partner_gms.mk
+-include vendor/lineage/config/props.mk
