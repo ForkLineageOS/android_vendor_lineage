@@ -254,7 +254,7 @@ PRODUCT_PACKAGES += \
     StitchImage
 
 # FOD
-ifeq ($(TARGET_DEVICE),RMX1931)
+ifeq ($(TARGET_DEVICE),fajita RMX1931)
 PRODUCT_PACKAGES += \
     FodAnimationResources
 endif
