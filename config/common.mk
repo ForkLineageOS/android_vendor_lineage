@@ -280,7 +280,7 @@ PRODUCT_PACKAGES += \
     StitchImage
 
 # FOD
-ifneq ($(filter fajita RMX1931 y2s,$(TARGET_DEVICE)),)
+ifneq ($(filter fajita davinci RMX1931 y2s,$(TARGET_DEVICE)),)
 PRODUCT_PACKAGES += \
     FodAnimationResources
 endif
