@@ -24,6 +24,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 endif
 
+# Build fingerprint
+BUILD_FINGERPRINT := google/raven/raven:13/TP1A.221005.002/9012097:user/release-keys
+ADDITIONAL_BUILD_PROPERTIES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
