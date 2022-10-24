@@ -24,6 +24,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 endif
 
+# Build fingerprint
+BUILD_FINGERPRINT := google/cheetah/cheetah:13/TD1A.221105.001/9104446:user/release-keys
+ADDITIONAL_BUILD_PROPERTIES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
